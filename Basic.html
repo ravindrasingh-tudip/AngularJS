@@ -1,0 +1,43 @@
+<html>
+	<title>Home</title>
+	
+	<head >
+	<script src="E:\Ravindra\AngularJS Practice\angular.min.js">
+	</script>
+	<script>
+	
+	//create a module
+	var myapp=angular.module("module1",[]);
+	
+		myapp.controller("myController",function($scope){
+		//$scope.name="";
+		//$scope.age="";
+	   $scope.myfunc=function(){
+	   console.log($scope.name);
+		$scope.name1=$scope.name;
+		$scope.age1=$scope.age;
+		}
+		});
+	</script>
+	</head>
+
+	
+	<body ng-app="module1">
+<div   ng-controller="myController">
+Name:	<input type="text" ng-model="name">
+<br>
+Id:		<input type="text" ng-model="age">
+
+<button type="button" ng-click="myfunc()">ok</button>
+Copied
+<br>
+
+Name:	<input type="text" ng-model="name1">
+<br>
+Id:		<input type="text" ng-model="age1">
+
+</div>
+
+
+</body>
+</html>

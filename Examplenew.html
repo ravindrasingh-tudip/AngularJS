@@ -1,0 +1,59 @@
+<html>
+	<title>Practice</title>
+	<head>
+		<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+		
+		<script>
+		
+			var myApp=angular.module('module1',[]);
+			
+			myApp.controller('loginController',function($scope,$window){
+			$scope.name="rAVI";
+			$scope.age="sINGH";
+			$scope.countinc=0;
+			console.log("value before"+" "+$scope.countinc);
+			$scope.count=function(){
+			console.log("value "+" "+$scope.countinc);
+
+			
+			$scope.countinc=parseInt($scope.countinc)+1;
+			
+			
+			}
+			$scope.myFunc=function(){
+			$window.alert("do not change");
+			}
+			});
+		</script>
+	</head>
+	<body ng-app="module1">
+		<div ng-controller="loginController" name="div1">
+			<input type="checkbox" ng-model="all">click here<br>
+			<table name="tb1">
+				<tr>
+					<td>Enter Name</td>
+					<td><input type="text" ng-model="name" ng-change="myFunc()"      ng-disabled="all"</td>
+				</tr>
+				<tr>
+					<td>Enter your age</td>
+					<td><input type="text" ng-model="age" ng-blur="count()" ng-focus="count()" ng-copy="count()" ng-disabled="all"</td>
+				</tr>
+				
+			</table>
+			
+			<div>
+				<tr>
+				<td><textarea ng-disabled="all">name:{{name}}</textarea></td>
+				</tr>
+				<tr>
+				
+				<td><textarea ng-disabled="all">age:{{age}}</textarea></td>
+				</tr>
+			</div>
+			<div>
+				count:<input type="text" ng-model="countinc">
+			</div>
+		</div>
+	
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<title>Filter</title>
+	<head>
+	<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	</script>
+	
+	<script>
+	var myApp=angular.module("module1",[]);
+	myApp.controller("myController",function($scope){
+	$scope.name=[
+		'ravi',
+		'alekh',
+		'kushagra'
+	]
+	});
+	</script>
+	</head>
+	<body ng-app="module1">
+	<div ng-controller="myController">
+	<input type="text" ng-model="test">
+	<ol>
+		<li ng-repeat="x in name | filter:test">
+		{{x}}
+		</li>
+	</ol>
+	</div>
+	<div ng-include="Basic.html"></div>
+	</body>
+
+
+</html>

@@ -1,0 +1,36 @@
+<html>
+	<title>AngularPractise</title>
+	<head>
+		<script src="C:\xampp\htdocs\AngularJSPractice\angular.min.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js">
+		</script>
+		
+		<script>
+		var myApp=angular.module("practiseModule",[]);
+		
+		
+		</script>
+	</head>
+	<body np-app="practiseModule">
+		<form name="myForm" ng-submit="login()">
+				<div>
+					<label>Enter the UserName:</label>
+					<input type="text" name="username" ng-model="username" required>
+					<span ng-show="myForm.username.$touched">The name is required.</span>
+				</div>
+				<div>
+					<label>Enter the Password</label>
+					<input type="password" name="password">
+					<span ng-show="myForm.password.$touched">The name is required.</span>
+				</div>
+		</form>
+		</div>
+	
+	
+	
+	</body>
+	
+	
+	
+</html>

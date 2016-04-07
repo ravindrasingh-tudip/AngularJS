@@ -1,0 +1,32 @@
+<html>
+	<title>Directives Example</title>
+
+	<head>
+	<script src="E:\Ravindra\AngularJSPractice\angular.min.js">
+</script>
+	<script>
+	var myapp=angular.module("customerinfo",[]);
+	
+	
+	
+	myapp.directive("myDirective",function(){
+	
+	return{
+		restrict:'E',
+		templateUrl:'E:\Ravindra\AngularJSPractice\Sample.html'
+	};
+	});
+	</script>
+	
+	
+	</head>
+	
+	<body> 
+		<div ng-app="customerinfo" >
+    <my-directive> </my-directive>
+	</div>
+	
+	
+	</body>
+
+</html>

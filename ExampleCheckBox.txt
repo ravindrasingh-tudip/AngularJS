@@ -1,0 +1,10 @@
+<html>
+	<title>CheckBox</title>
+	<head>
+		<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+	
+	
+	</head>
+
+
+</html>

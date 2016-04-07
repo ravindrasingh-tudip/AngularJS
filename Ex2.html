@@ -1,0 +1,25 @@
+<html>
+	<title>
+		Example-2
+	</title>
+
+	<head>
+		<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+		
+		<script>
+			var myApp=angular.module('module',[]);
+			
+		</script>
+	</head>
+	<body ng-app="module">
+			<div ng-init="nameinfo={name:'ravi',lastname:'singh'}">
+				<input type="text" ng-model="name">
+				<p>Hello!<span ng-bind="name"></span></p>
+				<p>Detail</p>
+				<p >{{nameinfo.lastname+" "+nameinfo.name}}</p>
+			</div>
+	
+	
+	
+	</body>
+</html>

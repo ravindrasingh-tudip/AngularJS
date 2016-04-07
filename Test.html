@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="E:\Ravindra\AngularJS Practice\angular.min.js">
+</script>
+
+<script>
+var myapp=angular.module("module1",[]);
+
+	myapp.service("myservice",function(){
+	this.concatstr=function(s1,s2){
+	var str=s1.toUpperCase() +" "+ s2.toUpperCase();
+	return str;
+	}
+	});
+
+	myapp.controller("controller1",function($scope,myservice){
+	
+	$scope.t1="";
+	$scope.t2="";
+	
+	$scope.onclick=function(){
+	$scope.t3=myservice.concatstr($scope.t1,$scope.t2);
+	
+	
+	};
+	});
+	
+</script>
+</head>
+
+<body ng-app="module1">
+<div ng-controller="controller1">
+Enter The First String<input type="text" ng-model="t1">
+Enter The First String<input type="text" ng-model="t2">
+<br>
+<button type="button" ng-click="onclick()">Concat</button>
+<input type="text" ng-model="t3">
+</div>
+</body>
+
+
+</html>

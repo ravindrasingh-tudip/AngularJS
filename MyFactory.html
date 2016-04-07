@@ -1,0 +1,44 @@
+<html>
+<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+<head>
+
+
+<script>
+var myapp=angular.module("module1",[]);
+
+	myapp.factory("myfactory",function(){
+	var sample={};
+	sample.concatstr=function(s1,s2){
+	var str=parseInt(s1)+parseInt(s2);
+	return str;
+	}
+	return sample;
+	});
+
+	myapp.controller("controller1",function($scope,myfactory){
+	
+	$scope.t1="";
+	$scope.t2="";
+	
+	$scope.onclick=function(){
+	$scope.t3=myfactory.concatstr($scope.t1,$scope.t2);
+	
+	
+	};
+	});
+	
+</script>
+</head>
+
+<body ng-app="module1">
+<div ng-controller="controller1">
+Enter The First Number:<input type="text" ng-model="t1"><br><br>
+Enter The Second Number:<input type="text" ng-model="t2">
+<br>
+&nbsp;&nbsp;<button type="button" ng-click="onclick()">Add</button>
+<input type="text" ng-model="t3">
+</div>
+</body>
+
+
+</html>

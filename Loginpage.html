@@ -1,0 +1,25 @@
+<div>
+	<form name="myForm">
+	<table>
+		<div name="user">
+			<tr><td><p>Name:</td>
+				<td><input name="myName" ng-model="myName" required></td>
+				<td><span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span></td>
+			</p></tr>
+		</div>
+		<div name="password">
+			<tr><td><p>Password:</td>
+				<td><input type="password" name="myPass" ng-model="myPass" required></td>
+				<td><span ng-show="myForm.myPass.$touched && myForm.myPass.$invalid">The password is required.</span></td>
+			</p></tr>
+		</div>
+		<div name="loginDiv">
+			<tr><td><button name="loginBtn" type="submit" ng-click="login()">Login
+			</button></td></tr>
+		</div>
+		<div>
+		{{myName}}
+		</div>
+	</table>
+	</form>
+</div>

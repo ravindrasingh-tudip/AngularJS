@@ -1,0 +1,36 @@
+<html>
+	<title>ServiceEx</title>
+	<head>
+	<script src="E:\Ravindra\AngularJS Practice\angular.min.js"></script>
+	<script> src="E:\Ravindra\AngularJS Practice\MyService.js"	</script>
+	<script>
+	//create a module
+	var myModule=angular.module("module1",[]);
+	
+	//create a controller
+	myModule.controller("convertToString",function($scope,mystrservice){
+	cosole.log("hi");
+	$scope.str1="";
+	scope.convertString=function(str1){
+	
+	$scope.constr=mystrservice.conversion(str1);
+	}
+	
+	
+	
+	});
+	</script>
+	</head>
+
+	<body ng-app="module1">
+	<div ng-controller="convertToString">
+	
+	Enter String: 	<input type="text" ng-model="str1"><br>
+	Coverted String:<input type="text" ng-model="constr"><br>
+	<button type="button" ng-click="convertString()">Convert String to Lowercase</button>
+		
+	
+	</div>
+	
+	</body>
+</html>

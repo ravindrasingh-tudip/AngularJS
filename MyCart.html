@@ -1,0 +1,60 @@
+<html>
+	<title>MyCart</title>
+	<style>
+		div {
+		transition: all linear 0.5s;
+		background-color: green;
+		height: 100px;
+		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+			}
+
+		.ng-hide {
+		height: 0;
+		width: 0;
+		background-color: red;
+		top:-200px;
+		left: 200px;
+		}
+	</style>	
+	<head>
+		<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+		<script>
+				var myApp=angular.module("cart",['ngAnimate']);
+				myApp.controller("shop",function($scope){
+					$scope.item=["butter","milk"];
+					$scope.showMe=true;
+					$scope.addItem=function(){
+					$scope.item.push($scope.add);
+					
+					
+					$scope.showMe=function(){
+					return !$scope.showMe;
+					
+					
+					};
+					}
+				});
+
+		
+		</script>
+		
+	</head>
+	<body ng-app="cart">
+		<div ng-controller="shop">
+			<h1>Hide The Content <input type="checkbox" ng-model="myCheck"</h1>
+				<div
+				ng-hide= "myCheck" ng-model="item" ng-repeat="x in item track by $index" style="background-color:red" ng-show="showMe">
+					{{x}}
+				</div>
+				<div >
+					<input type="text" ng-model="add">
+					<button type="button" ng-click="addItem()">Add</button>
+				</div>
+				<div>{{item}}</div>
+		</div>
+	</body>
+</html>

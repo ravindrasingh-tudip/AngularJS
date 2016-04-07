@@ -1,0 +1,43 @@
+<html>
+	<title>Filter-Ex</title>
+	<script src="E:\Ravindra\AngularJSPractice\angular.min.js"></script>
+	<head>
+	
+	
+	<script>
+	var myApp=angular.module("module",[]);
+	
+	myApp.controller("myController",function($scope){
+	$scope.name=['ravi','alekh','kushagra','shubham'];
+	});
+	
+	myApp.filter("myFilter",function(){
+	return function(nm) {
+	var i,c, str="";
+	nm=nm.split();
+	for(i=0;i<nm.length;i++){
+	 c=nm[i];
+		
+		c=c.toUpperCase();
+	
+		str=str+c;
+	}
+	return str;
+	
+	};
+	});
+	</script>
+	</head>
+
+	<body ng-app="module">
+		<div ng-controller="myController" >
+		<span ng-repeat="nm in name">
+		
+			{{nm | myFilter}}
+		
+		</span>
+		</div>
+	
+	
+	</body>
+</html>
